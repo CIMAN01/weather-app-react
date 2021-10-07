@@ -19,7 +19,6 @@ const LocationSearch = (props) => {
     // Teleport public API @ developers.teleport.org/api
     let cityBaseEndpoint = 'https://api.teleport.org/api/cities/?search='; 
 
-
     const handleSuggestions = async (event) => {
         // prevent re-render
         event.preventDefault();
@@ -42,9 +41,7 @@ const LocationSearch = (props) => {
             setSuggestions((prevOption) => {
                 return  [...prevOption, option]; 
              }) 
-        }
-
-        
+        } 
     }    
 
     return (
