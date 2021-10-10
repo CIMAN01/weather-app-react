@@ -16,3 +16,4 @@ City suggestions is implemented via an API when searching for a city:
 ![screenshot-3](https://user-images.githubusercontent.com/34729011/136462817-a57eabc4-7834-46bb-95b2-0bffb1641a8f.png)
 ![screenshot-4](https://user-images.githubusercontent.com/34729011/136462819-0eb867a9-b8c8-486f-9dc6-01fc91e2256b.png)
 
+Copyright © 2021 CIMAN01
