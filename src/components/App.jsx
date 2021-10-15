@@ -160,7 +160,7 @@ function App() {
     }
 
 
-    const getForecast = async (cityName) => {
+    const getForecast = async cityName => {
         let request;
         let unit = forecastTempUnit //tempUnit;
         // chose metric or imperial
@@ -170,10 +170,10 @@ function App() {
         else {
             request = forecastBaseEndpoint + cityName + '&units=metric&appid=' + privateAPIKey;
         }
-        let response = await fetch(request); // make a request
-        let forecast = await response.json(); // convert the results to a json object
-        let forecastList = forecast.list; // store the json list that contains an array (40 element array)  
         let fiveDayForecast = []; 
+        // make an api request
+        let response = await fetch(request).then(response => response.json()).catch(e => console.log('Error', e));
+        let forecastList = response.list; // store the json list that contains an array (40 element array)  
         // check every element in the array (40 items)
         forecastList.forEach(day => {
             // replace the empty space with the letter T to get the proper formatting for the date syntax
